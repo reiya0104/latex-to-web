@@ -1,0 +1,29 @@
+root
+|   .gitignore
+|   index.html
+|   package.json
+|   README.md
+|   tree.txt
+|   tsconfig.json
+|   vite.config.ts
+|   yarn.lock
+|
++---public
+|       favicon.ico
+|
+\---src
+    |   App.vue
+    |   env.d.ts
+    |   main.ts
+    |   router.ts
+    |
+    +---assets
+    |       logo.png
+    |
+    +---components
+    |       HelloWorld.vue
+    |
+    \---views
+            About.vue
+            Home.vue
+
