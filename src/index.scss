@@ -22,3 +22,9 @@ button {
   @apply py-0.5;
   @apply rounded;
 }
+
+input {
+  @apply bg-gray-100;
+  @apply border;
+  @apply border-gray-500;
+}
