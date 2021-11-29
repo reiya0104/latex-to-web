@@ -35,9 +35,12 @@ export default {
 
     onMounted(() => {
       console.log(renderKatex.value) // <p>aaaa</p>
-      katex.render("c = \\pm\\sqrt{a^2 + b^2}", renderKatex.value, {
-        throwOnError: false
-      });
+      if (renderKatex.value != undefined) {
+        katex.render("c = \\pm\\sqrt{a^2 + b^2}", renderKatex.value, {
+          throwOnError: false
+        });
+      }
+      console.log(renderKatex.value)
     })
 
     return { renderKatex }
