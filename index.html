@@ -1,13 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>latex-to-web | れいやのぺるのーと</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>latex-to-web | れいやのぺるのーと</title>
+</head>
+
+<body>
+  <script>
+    /*
+     * @hiyoko3 さんの記事
+     * Github pagesでハッシュなしSPAを作る[Vue.js + vue-router]
+     * https://qiita.com/hiyoko3/items/64e0658439c66b16e18c
+     * から引用させていただきました．
+     */
+    (function (l) {
+      if (l.search) {
+        var q = {};
+        l.search.slice(1).split('&').forEach(function (v) { // ?p=/fooの分解
+          var a = v.split('='); // 'p=/foo' となっているはずなので=で分割
+          q[a[0]] = a[1]; // {p: '/foo'} 形式に修正
+        });
+        if (q.p !== undefined) {
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + (q.p || '')); // https://hoge.com/fooへ遷移
+        }
+      }
+    }(window.location))
+  </script>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
