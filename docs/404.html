@@ -19,13 +19,17 @@
       let port = l.port ? ':' + l.port : '';
       console.log(`l = ${l}`);
       console.log(`l.protocol = ${l.protocol}`);
+      console.log(`l.hostname = ${l.hostname}`);
+      console.log(`port = ${port}`);
+      console.log(`l.pathname = ${l.pathname}`);
+      console.log(`l.pathname.split('/').slice(0, 1 + segmentCount).join('/') = ${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`);
       console.log(`${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`);
       // l.replace(
       //   `${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`
       // );
-      l.replace(
-        `https://reiya0104.com/latex-to-web/?p=/about`
-      );
+      // l.replace(
+      //   `https://reiya0104.com/latex-to-web/?p=/about`
+      // );
     </script>
   </body>
 </html>
