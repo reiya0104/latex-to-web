@@ -5,6 +5,7 @@ import { authorize } from '@/router/guard';
 // HomeビューとAboutビューのインポート
 import Home from '@/views/Home.vue';
 import About from '@/views/About.vue';
+import Hoge from '@/views/Hoge.vue';
 
 const routes = [
   {
@@ -14,6 +15,10 @@ const routes = [
   {
     path: '/about',
     component: About  // Aboutビュールーティング
+  },
+  {
+    path: '/about/hoge',
+    component: Hoge  // Hogeビュールーティング
   },
 ]
 
