@@ -17,16 +17,21 @@
       let segmentCount = 1;
       let l = window.location;
       let port = l.port ? ':' + l.port : '';
-      let pathnamesplit = l.pathname.split('/');
-      let repositoryname = pathnamesplit[0];
+      let pathname = l.pathname[-1] != '/' ? l.pathname : l.pathname.slice(0, -1);
+      let pathnamesplit = pathname.split('/');
+      let repositoryname = pathnamesplit[segmentCount];
+      let underpathlen = pathnamesplit.length - segmentCount - 1;
+      let underpath = pathnamesplit.slice(segmentCount, -underpathlen).join('/');
       console.log(`l = ${l}`);
       console.log(`l.protocol = ${l.protocol}`);
       console.log(`l.hostname = ${l.hostname}`);
       console.log(`port = ${port}`);
       console.log(`l.pathname = ${l.pathname}`);
+      console.log(`pathname = ${pathname}`);
       console.log(`pathnamesplit = ${pathnamesplit}`);
       console.log(`repositoryname = ${repositoryname}`);
-      console.log(`pathnamesplit[1] = ${pathnamesplit[1]}`);
+      console.log(`underpathlen = ${underpathlen}`);
+      console.log(`underpath = ${underpath}`);
       console.log(`l.pathname.split('/').slice(0, 1 + segmentCount).join('/') = ${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`);
       console.log(`${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`);
       // l.replace(
