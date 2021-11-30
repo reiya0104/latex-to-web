@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Page | れいやのぺるのーと</title>
+  </head>
+  <body>
+    <script>
+      /*
+       * @hiyoko3 さんの記事
+       * Github pagesでハッシュなしSPAを作る[Vue.js + vue-router]
+       * https://qiita.com/hiyoko3/items/64e0658439c66b16e18c
+       * を参考にさせていただきました．
+       */
+      let segmentCount = 1;
+      let l = window.location;
+      let port = l.port ? ':' + l.port : '';
+      let pathname = (l.pathname.slice(-1) != '/') ? l.pathname : l.pathname.slice(0, -1);
+      let pathnamesplit = pathname.split('/');
+      let repositoryname = pathnamesplit[segmentCount];
+      let underpath = pathnamesplit.slice(segmentCount + 1).join('/');
+      let replacepath = `${l.protocol}//${l.hostname}${port}/${repositoryname}/?p=/${underpath}`;
+
+      // l.replace(
+      //   `${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`
+      // );
+
+      l.replace(
+        replacepath
+      );
+    </script>
+  </body>
+</html>
