@@ -33,7 +33,7 @@
       // console.log(`underpathlen = ${underpathlen}`);
       console.log(`underpath = ${underpath}`);
       console.log(`l.pathname.split('/').slice(0, 1 + segmentCount).join('/') = ${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`);
-      console.log(`${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`);
+      console.log(`${l.protocol}//${l.hostname}${port}/${repositoryname}/?p=/${underpath}`);
       // l.replace(
       //   `${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`
       // );
