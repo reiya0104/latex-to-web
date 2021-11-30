@@ -12,16 +12,20 @@
        * @hiyoko3 さんの記事
        * Github pagesでハッシュなしSPAを作る[Vue.js + vue-router]
        * https://qiita.com/hiyoko3/items/64e0658439c66b16e18c
-       * から引用させていただきました．
+       * を参考にさせていただきました．
        */
       let segmentCount = 1;
       let l = window.location;
       let port = l.port ? ':' + l.port : '';
+      let pathnamesplit = l.pathname.split('/');
+      let repositoryname = pathnamesplit[0];
       console.log(`l = ${l}`);
       console.log(`l.protocol = ${l.protocol}`);
       console.log(`l.hostname = ${l.hostname}`);
       console.log(`port = ${port}`);
       console.log(`l.pathname = ${l.pathname}`);
+      console.log(`pathnamesplit = ${pathnamesplit}`);
+      console.log(`repositoryname = ${repositoryname}`);
       console.log(`l.pathname.split('/').slice(0, 1 + segmentCount).join('/') = ${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`);
       console.log(`${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`);
       // l.replace(
