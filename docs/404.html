@@ -17,7 +17,7 @@
       let segmentCount = 1;
       let l = window.location;
       let port = l.port ? ':' + l.port : '';
-      let pathname = l.pathname[-1] != '/' ? l.pathname : l.pathname.slice(0, -1).join('/');
+      let pathname = (l.pathname.slice(-1) != '/') ? l.pathname : l.pathname.slice(0, -1);
       let pathnamesplit = pathname.split('/');
       let repositoryname = pathnamesplit[segmentCount];
       // let underpathlen = pathnamesplit.length - segmentCount - 1;
