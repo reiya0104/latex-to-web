@@ -1,5 +1,5 @@
 <template>
-  <h1>This is a Hoge page!</h1>
+  <h1>This is Hoge page!</h1>
 </template>
 
 <script lang="ts">
