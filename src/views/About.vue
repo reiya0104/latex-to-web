@@ -17,12 +17,6 @@ import { defineComponent, ref, onMounted } from 'vue'
 import Parent from "@/components/Parent.vue";
 import katex from "katex";
 
-// let element = document.getElementById("render-katex");
-// console.log(`element = ${element}`);
-// katex.render("c = \\pm\\sqrt{a^2 + b^2}", element, {
-//     throwOnError: false
-// });
-
 export default {
   name: "About",
   components: {
@@ -31,16 +25,16 @@ export default {
   setup() {
     const renderKatex = ref<HTMLElement>()
 
-    console.log(renderKatex.value) // undefined
+    // console.log(renderKatex.value) // undefined
 
     onMounted(() => {
-      console.log(renderKatex.value) // <p>aaaa</p>
+      // console.log(renderKatex.value) // <p>aaaa</p>
       if (renderKatex.value != undefined) {
         katex.render("c = \\pm\\sqrt{a^2 + b^2}", renderKatex.value, {
           throwOnError: false
         });
       }
-      console.log(renderKatex.value)
+      // console.log(renderKatex.value)
     })
 
     return { renderKatex }
