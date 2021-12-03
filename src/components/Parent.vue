@@ -1,5 +1,8 @@
 <template>
   <div>
+    <p>{{ titleComputed }}</p>
+  </div>
+  <div>
     <p>parent</p>
     <input type="text" v-model="titleComputed" />
     <ChildInput v-model:title="titleComputed" />
