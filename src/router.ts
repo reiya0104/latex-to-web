@@ -6,6 +6,7 @@ import { authorize } from '@/router/guard';
 import Home from '@/views/Home.vue';
 import About from '@/views/About.vue';
 import Hoge from '@/views/Hoge.vue';
+import Family2 from '@/views/Family2.vue';
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
   {
     path: '/about/hoge',
     component: Hoge  // Hogeビュールーティング
+  },
+  {
+    path: '/about/family2',
+    component: Family2  // Family2ビュールーティング
   },
 ]
 
