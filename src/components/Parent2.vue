@@ -19,7 +19,9 @@
 import { defineComponent, ref, computed, onMounted } from 'vue'
 import katex from 'katex'
 
-
+const spaceCheck = (text: string): boolean => {
+  return (!text || !text.match(/\S/g));
+}
 
 export default defineComponent({
   name: "Parent2",
@@ -28,7 +30,7 @@ export default defineComponent({
     const title = ref('\\int_0^1 x \\, dx = \\frac 1 2')
 
     const renderKatexByValue = (value: string): void => {
-      const renderText = '\\hspace*{0pt} '+ value;
+      const renderText = !spaceCheck(value) ? value : '\\hspace*{0pt}'
       console.log(`renderText = ${renderText}`);
       if (renderKatex.value != undefined) {
         katex.render(renderText, renderKatex.value, {
