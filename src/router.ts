@@ -3,10 +3,10 @@ import * as VueRouter from 'vue-router';
 import { createRouter, createWebHistory } from 'vue-router'
 import { authorize } from '@/router/guard';
 // HomeビューとAboutビューのインポート
-import Home from '@/views/Home.vue';
-import About from '@/views/About.vue';
-import Hoge from '@/views/Hoge.vue';
-import Family2 from '@/views/Family2.vue';
+import Home from '@v/Home.vue';
+import About from '@v/About.vue';
+import Hoge from '@v/Hoge.vue';
+import Family2 from '@v/Family2.vue';
 
 const routes = [
   {

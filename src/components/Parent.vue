@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue'
-import ChildInput from '@/components/Child.vue'
+import ChildInput from '@c/Child.vue'
 
 export default defineComponent({
   name: 'ParentInput',

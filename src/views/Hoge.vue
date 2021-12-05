@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import Parent from "@/components/Parent.vue";
+import Parent from "@c/Parent.vue";
 import katex from "katex";
 
 export default {

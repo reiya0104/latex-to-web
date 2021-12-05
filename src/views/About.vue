@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue'
-import Parent from "@/components/Parent.vue";
+import Parent from "@c/Parent.vue";
 import katex from "katex";
 
 export default {
