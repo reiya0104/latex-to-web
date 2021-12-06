@@ -7,6 +7,7 @@ import Home from '@v/Home.vue';
 import About from '@v/About.vue';
 import Hoge from '@v/Hoge.vue';
 import Family2 from '@v/Family2.vue';
+import RenderKatex from '@v/RenderKatex.vue';
 
 const routes = [
   {
@@ -24,6 +25,10 @@ const routes = [
   {
     path: '/about/family2',
     component: Family2  // Family2ビュールーティング
+  },
+  {
+    path: '/render-katex',
+    component: RenderKatex  // RenderKatexビュールーティング
   },
 ]
 

@@ -36,8 +36,8 @@ export default defineComponent({
         katex.render(renderText, renderKatex.value, {
           throwOnError: false,
           displayMode: true,
-          strict: false,
-          trust: (context) => ["\\htmlClass"].includes(context.command),
+          // strict: false,
+          // trust: (context) => ["\\htmlClass"].includes(context.command),
         });
       }
     }

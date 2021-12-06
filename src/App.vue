@@ -3,7 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/about/hoge">Hoge</router-link> |
-    <router-link to="/about/family2">Family2</router-link>
+    <router-link to="/about/family2">Family2</router-link> |
+    <router-link to="/render-katex">RenderKatex</router-link>
   </div>
   <router-view/>
 </template>
