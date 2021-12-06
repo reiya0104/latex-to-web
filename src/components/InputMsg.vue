@@ -1,6 +1,12 @@
 <template>
   <KatexMsg :msg="msg" />
-  <textarea class="w-1/2 bg-gray-50 border rounded" type="text" v-model="msgComputed" />
+  <textarea
+    class="w-2/3 lg:w-1/2 bg-gray-50 border rounded p-2"
+    type="text"
+    placeholder="a^2 + b^2 = c^2"
+    rows="5"
+    v-model="msgComputed"
+  />
 </template>
 
 <script lang="ts">

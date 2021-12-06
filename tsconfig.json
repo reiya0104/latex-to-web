@@ -18,6 +18,7 @@
       "@/*": ["./src/*"],
       "@c/*": ["./src/components/*"],
       "@v/*": ["./src/views/*"],
+      "@u/*": ["./src/utils/*"],
     }
   },
   "include": [

@@ -15,6 +15,7 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
       '@c': resolve(__dirname, 'src/components'),
       '@v': resolve(__dirname, 'src/views'),
+      '@u': resolve(__dirname, 'src/utils'),
     }
   },
   plugins: [vue()]
