@@ -2,43 +2,22 @@
   <div class="about">
     <h1>This is About page</h1>
   </div>
-  <p>$a$ \[a\]</p>
   <div>
-    <p ref="renderKatex">aaaa</p>
-  </div>
-  <div>
-    <Parent/>
+    <h2>やりたいこと</h2>
+    <ul>
+      <li>localStorage の導入</li>
+      <li>textarea の補完</li>
+      <li>簡単なtexファイルからwebページを作成</li>
+    </ul>
   </div>
 </template>
 
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue'
-import Parent from "@c/Parent.vue";
-import katex from "katex";
+import { defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
   name: "About",
-  components: {
-    Parent
-  },
-  setup() {
-    const renderKatex = ref<HTMLElement>()
-
-    // console.log(renderKatex.value) // undefined
-
-    onMounted(() => {
-      // console.log(renderKatex.value) // <p>aaaa</p>
-      if (renderKatex.value != undefined) {
-        katex.render("c = \\pm\\sqrt{a^2 + b^2}", renderKatex.value, {
-          throwOnError: false
-        });
-      }
-      // console.log(renderKatex.value)
-    })
-
-    return { renderKatex }
-  }
-};
+})
 </script>
 
